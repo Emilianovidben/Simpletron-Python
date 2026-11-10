@@ -1,0 +1,9 @@
+10 input a
+20 if a < 0 goto 60
+30 if a == 0 goto 80
+40 print 1
+50 goto 90
+60 print -1
+70 goto 90
+80 print 0
+90 end
