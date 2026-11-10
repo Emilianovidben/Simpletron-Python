@@ -1,0 +1,23 @@
+name: Pruebas Simpletron
+on:
+  push:
+    branches: [main, proyecto-final]
+  pull_request:
+    branches: [main]
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verificar archivos Python
+        run: python -m compileall -q src pruebas
+      - name: Ejecutar pruebas
+        run: python -m unittest discover -s pruebas -v
+      - name: Probar compilacion y ejecucion
+        run: |
+          python -m src.cli compilar programas/simple/suma.simple /tmp/suma.sml
+          python -m src.cli ejecutar /tmp/suma.sml --entrada 7 --entrada 8
+          python -m src.cli expresion "2+3*(4+1)^2"

@@ -1,0 +1,9 @@
+10 rem Factorial
+20 input n
+30 let f = 1
+40 if n <= 1 goto 80
+50 let f = f * n
+60 let n = n - 1
+70 goto 40
+80 print f
+90 end

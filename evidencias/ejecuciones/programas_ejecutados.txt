@@ -1,0 +1,32 @@
+Ejecución real de programas
+Origen: GitHub Actions, flujo Pruebas Simpletron
+https://github.com/Emilianovidben/Simpletron-Python/actions/runs/42729965242
+
+$ python -m src.cli compilar programas/simple/suma.simple /tmp/suma.sml
+Archivo generado: /tmp/suma.sml
+Instrucciones: 9
+Datos: 4
+
+$ python -m src.cli ejecutar /tmp/suma.sml --entrada 7 --entrada 8
+? 7
+? 8
+15
+
+$ python -m src.cli expresion "2+3*(4+1)^2"
+Agrupación: correcta
+Postfija: 2 3 4 1 + 2 ^ * +
+Resultado: 77
+
+Ejecución adicional en entorno de prueba (Python):
+$ python -m src.cli compilar programas/simple/factorial.simple /tmp/factorial_generado.sml
+Archivo generado: /tmp/factorial_generado.sml
+Instrucciones: 20
+Datos: 5
+
+$ python -m src.cli ejecutar /tmp/factorial_generado.sml --entrada 5
+? 5
+120
+
+$ python -m src.cli ejecutar programas/sml/extension.sml
+32
+2
