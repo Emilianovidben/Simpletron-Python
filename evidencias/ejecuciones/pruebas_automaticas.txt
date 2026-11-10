@@ -1,0 +1,30 @@
+Ejecución real de pruebas automatizadas
+Fuente: GitHub Actions, ejecución #42729965242
+URL: https://github.com/Emilianovidben/Simpletron-Python/actions/runs/42729965242
+Comando: python -m unittest discover -s pruebas -v
+
+test_agrupacion ... ok
+test_cadenas ... ok
+test_comparaciones ... ok
+test_compilar_suma ... ok
+test_condiciones ... ok
+test_division_cero_sml ... ok
+test_division_entera ... ok
+test_factorial ... ok
+test_mod_y_potencia ... ok
+test_opcode_invalido ... ok
+test_overflow ... ok
+test_postfija ... ok
+test_precedencia ... ok
+test_referencias_adelante ... ok
+test_roundtrip_sml ... ok
+test_salto_infinito ... ok
+test_sintaxis_simple ... ok
+test_suma_sml ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.006s
+
+OK
+
+Resultado del trabajo pruebas: success
